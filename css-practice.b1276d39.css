@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --columns: 2;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.people {
+  grid-gap: 30px;
+  grid-template-columns: repeat(var(--columns), 200px);
+  justify-content: center;
+  padding: 30px 35px;
+  display: grid;
+}
+
+@media (width >= 1000px) {
+  .people {
+    --columns: 4;
+    padding: 30px 55px;
+  }
+}
+
+.person {
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  transition: transform 1s;
+  display: flex;
+}
+
+.person__photo {
+  position: relative;
+}
+
+.person__img {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.person__rank {
+  text-align: center;
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  position: absolute;
+  top: 84px;
+  right: 10px;
+}
+
+.person__name {
+  text-align: center;
+  color: #2f4f4f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.person__extra {
+  display: none;
+}
+
+.person__sport, .person__pay {
+  text-align: center;
+  color: #000;
+  font-size: 21.6px;
+  font-weight: 400;
+}
+
+.person:hover {
+  background-color: #eee;
+  border-radius: 12px;
+  transition: transform 1s;
+  transform: scale(1.2);
+}
+
+.person:hover .person__img {
+  border-radius: 60px;
+  margin: 12px;
+}
+
+.person:hover .person__rank {
+  top: 90px;
+  right: 20px;
+}
+
+.person:hover .person__extra {
+  margin-bottom: 19.2px;
+  display: block;
+}
+
+.person:hover .person__name {
+  margin-bottom: 10.8px;
+}
+/*# sourceMappingURL=css-practice.b1276d39.css.map */
