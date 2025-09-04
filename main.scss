@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 1s;
 
   &__photo {
     position: relative;
@@ -57,10 +58,6 @@ body {
     border-radius: 50%;
   }
 
-  &__details {
-
-  }
-
   &__name {
     font-size: 20px;
     text-align: center;
@@ -69,14 +66,47 @@ body {
   }
 
   &__extra {
-
-  }
-
-  &__sport{
     display: none;
   }
 
+  &__sport {
+    font-weight: 400;
+    font-size: 21.6px;
+    text-align: center;
+    color: #000;
+;
+    
+  }
   &__pay {
-    display: none;
+    font-weight: 400;
+    font-size: 21.6px;
+    text-align: center;
+    color: #000;
   }
+
+  &:hover {
+   background-color: #EEEEEE;
+   border-radius: 12px;
+   transform: scale(1.2);
+   transition: transform 1s;
+
+   & .person__img {
+    border-radius: 60px;
+    margin: 12px;  
+  }
+
+  & .person__rank {
+    top: 90px;
+    right: 20px;
+  }
+
+   & .person__extra {
+    display: block;
+    margin-bottom: 19.2;
+  }
+
+  & .person__name {
+    margin-bottom: 10.8px;
+  }
+}
 }
